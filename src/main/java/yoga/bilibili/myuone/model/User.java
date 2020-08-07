@@ -1,6 +1,12 @@
 package yoga.bilibili.myuone.model;
 
+import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
+
 import java.io.Serializable;
+
+@Component
 
 public class User implements Serializable {
     private String userName;
@@ -16,5 +22,13 @@ public class User implements Serializable {
     }
     public void setAge(int age){
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userName='" + userName + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
